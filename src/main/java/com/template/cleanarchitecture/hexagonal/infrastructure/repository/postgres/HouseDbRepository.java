@@ -1,9 +1,9 @@
-package com.template.cleanarchitecture.hexagonal.infrastructure.repository.h2;
+package com.template.cleanarchitecture.hexagonal.infrastructure.repository.postgres;
 
 
 import com.template.cleanarchitecture.hexagonal.domain.House;
 import com.template.cleanarchitecture.hexagonal.domain.repository.HouseRepository;
-import com.template.cleanarchitecture.hexagonal.infrastructure.repository.h2.entity.HouseEntity;
+import com.template.cleanarchitecture.hexagonal.infrastructure.repository.postgres.entity.HouseEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
