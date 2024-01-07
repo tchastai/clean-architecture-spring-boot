@@ -14,6 +14,22 @@ public class House {
 
     private Integer price;
 
+    public House(String address, String city, Integer price) {
+        if(address == null || address.isEmpty() || address.isBlank()) {
+            throw new DomainException(ExceptionConstant.EXCEPTION_ADDRESS_CANNOT_BE_NULL_MESSAGE);
+        }
+        if(city == null || city.isEmpty() || city.isBlank()) {
+            throw new DomainException(ExceptionConstant.EXCEPTION_CITY_CANNOT_BE_NULL_MESSAGE);
+        }
+        if(price == null || price.toString().length() < 4) {
+            throw new DomainException(ExceptionConstant.EXCEPTION_PRICE_CANNOT_BE_NULL_MESSAGE);
+        }
+        this.id = UUID.randomUUID();
+        this.address = address;
+        this.city = city;
+        this.price = price;
+    }
+
     public House(UUID id, String address, String city, Integer price) {
         if(address == null || address.isEmpty() || address.isBlank()) {
             throw new DomainException(ExceptionConstant.EXCEPTION_ADDRESS_CANNOT_BE_NULL_MESSAGE);
@@ -24,7 +40,7 @@ public class House {
         if(price == null || price.toString().length() < 4) {
             throw new DomainException(ExceptionConstant.EXCEPTION_PRICE_CANNOT_BE_NULL_MESSAGE);
         }
-        this.id = id;
+        this.id = UUID.randomUUID();
         this.address = address;
         this.city = city;
         this.price = price;

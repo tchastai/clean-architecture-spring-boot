@@ -1,4 +1,6 @@
-package com.template.cleanarchitecture.hexagonal.domain.dto;
+package com.template.cleanarchitecture.hexagonal.application.dto;
+
+import com.template.cleanarchitecture.hexagonal.domain.House;
 
 import java.util.UUID;
 
@@ -13,5 +15,9 @@ public class GetHouseResponseDto {
         this.address = address;
         this.city = city;
         this.price = price;
+    }
+
+    public static GetHouseResponseDto mapFromHouse(House house) {
+        return new GetHouseResponseDto(house.getId(), house.getAddress(), house.getCity(), house.getPrice());
     }
 }

@@ -23,7 +23,7 @@ public class HouseDbRepository implements HouseRepository {
 
     @Override
     public Optional<House> findById(UUID id) {
-        return Optional.empty();
+        return Optional.ofNullable(jpaHouseRepository.findById(id).get().toHouse());
     }
 
     @Override
