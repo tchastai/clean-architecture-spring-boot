@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 
-
+@Data
 public class CreateHouseResponseDto {
     private final UUID id;
 

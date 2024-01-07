@@ -1,9 +1,11 @@
 package com.template.cleanarchitecture.hexagonal.application.dto;
 
 import com.template.cleanarchitecture.hexagonal.domain.House;
+import lombok.Data;
 
 import java.util.UUID;
 
+@Data
 public class GetHouseResponseDto {
     private UUID id;
     private  String address;

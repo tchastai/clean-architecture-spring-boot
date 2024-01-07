@@ -2,6 +2,8 @@ package com.template.cleanarchitecture.hexagonal.application.dto;
 
 
 import com.template.cleanarchitecture.hexagonal.domain.House;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +12,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateHouseRequestDto {
+    @NotEmpty
+    @NotNull
     private String address;
+
+    @NotEmpty
+    @NotNull
     private String city;
+
+    @NotEmpty
+    @NotNull
     private Integer price;
 
     public House mapToHouse() {
