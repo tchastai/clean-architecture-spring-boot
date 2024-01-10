@@ -4,6 +4,7 @@ A Spring Boot project inspired by Robert C. Martin's book 'Clean Architecture', 
 
 ## Architecture
 
+``` bash
 .
 ├── README.md
 ├── docker-compose.yaml
@@ -75,6 +76,6 @@ A Spring Boot project inspired by Robert C. Martin's book 'Clean Architecture', 
 │                           └── application
 │                               └── rest
 │                                   └── HouseControllerTest.java
-
+```
 
 As can be seen, the project is divided into two modules: The first one, called "domain," aims to isolate the business logic without injecting any additional library. This approach facilitates reusable business code, ensuring high maintainability, scalability, and testability.
